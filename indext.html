@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <title>Portfolio</title>
+    <style>
+      body {
+        background: #000;
+        display: flex;
+        justify-content: flex-start; /* đẩy sang trái */
+        align-items: center;
+        height: 100vh;
+        padding-left: 60px; /* cách mép trái một chút cho đẹp */
+      }
+
+      .hero-img {
+        position: relative;
+        width: 280px; /* tăng size container */
+        height: 280px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* viền nhiều màu dày + sáng mạnh */
+      .hero-img::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        padding: 14px; /* 👈 viền dày hơn */
+        background: conic-gradient(
+          red,
+          orange,
+          yellow,
+          lime,
+          cyan,
+          blue,
+          magenta,
+          red
+        );
+        -webkit-mask: radial-gradient(
+          farthest-side,
+          transparent calc(100% - 14px),
+          #000 calc(100% - 13px)
+        );
+        mask: radial-gradient(
+          farthest-side,
+          transparent calc(100% - 14px),
+          #000 calc(100% - 13px)
+        );
+        animation: spin 6s linear infinite;
+        filter: blur(18px) brightness(1.2); /* 👈 phát sáng lan xa hơn */
+        z-index: 1;
+      }
+
+      .hero-img img {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        z-index: 2;
+        position: relative;
+        transition: transform 0.3s ease;
+      }
+
+      /* Hover */
+      .hero-img:hover img {
+        transform: scale(1.08);
+      }
+      .hero-img:hover::before {
+        filter: blur(28px) brightness(1.5); /* 👈 sáng mạnh hơn khi hover */
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      body {
+        margin: 0;
+        background: #000;
+        color: #fff;
+        font-family: Arial, sans-serif;
+      }
+      .content-frame {
+        width: 100%;
+        height: 100vh; /* luôn chiếm full màn hình */
+        border: none;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <!-- Navbar -->
+    <nav class="navbar">
+      <h2>Lucky <span>YangCoder</span></h2>
+      <ul>
+        <li><a href="/indext.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="service.html">Service</a></li>
+        <li><a href="project.html">Project</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1 id="typing1">Hi, It's <span>Giang.Kma</span></h1>
+        <h2>I'am a <span>Student</span></h2>
+        <p>
+          My name is Doan Truong Giang, an 18-year-old student currently
+          studying at the Academy of Cryptography Techniques in Hanoi.
+          Passionate about technology and problem-solving, I’m on a journey to
+          decode the future, one algorithm at a time. Driven, curious, and ready
+          to make my mark in the digital world.
+        </p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/giangdoan2k6"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/yangdoankma/?igsh=ajhkYWFyYTVwZWRs#"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://www.tiktok.com/@yandoanc1?_t=ZS-8yz1TKwpiT3&_r=1"
+            ><i class="fab fa-tiktok"></i
+          ></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+
+      <div class="hero-img">
+        <img
+          src="https://scontent.fhan14-3.fna.fbcdn.net/v/t39.30808-6/488568183_2039409393236549_7360728000266099703_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=W93dvBi_7VwQ7kNvwHJeT1e&_nc_oc=Adn9qfDOVeBaTnggLg9w7gHlouVqqLWOMTFrkax3fuDf9fNleJ7rUAUHn7vmUv3SyD4&_nc_zt=23&_nc_ht=scontent.fhan14-3.fna&_nc_gid=3Qd5P_c1q8dPZYc6p4GXZQ&oh=00_AfVQpKSTXXNZa6VwK1fNW1Dz4QfTvuLSqr6prt_WQs1rSg&oe=68A8FAF3"
+          alt="Your Avatar"
+        />
+      </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style1.css" />
+    <title>Contact</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <h2>Lucky <span>YangCoder</span></h2>
+      <ul>
+        <li><a href="/indext.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="service.html">Service</a></li>
+        <li><a href="project.html">Project</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <section class="contact-section">
+      <h1 class="typewriter">Contact <span>Me</span></h1>
+      <form action="https://formspree.io/f/mvgqjjna" method="POST">
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="text" name="phone" placeholder="Phone Number" />
+        <input type="text" name="subject" placeholder="Subject" />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn-submit">Send Message</button>
+      </form>
+    </section>
+    <div class="neon-bar"></div>
+  </body>
+</html>

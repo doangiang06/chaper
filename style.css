@@ -1,0 +1,672 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000; /* nền đen */
+  color: #fff; /* chữ trắng */
+}
+body {
+  margin: 0;
+  background: #111;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  display: block; /* không dùng flex hoặc grid ngang */
+  overflow-x: hidden; /* tránh scroll ngang */
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  width: 100%;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+}
+
+.navbar h2 {
+  color: #0ff; /* tên xanh cyan */
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+/* Hover + Active */
+.navbar ul li a:hover,
+.navbar ul li a.active {
+  color: #0ff;
+  transform: scale(1.3); /* phóng to như kính lúp */
+  text-shadow: 0 0 8px #0ff, 0 0 16px #0ff, 0 0 24px #0ff;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  padding: 0 60px;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero-text h1 span {
+  color: #0ff;
+}
+
+.hero-text p {
+  color: #ccc;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+body {
+  background: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  font-size: 40px;
+  white-space: nowrap;
+  border-right: 3px solid cyan; /* con trỏ nháy */
+  overflow: hidden;
+  color: white;
+}
+
+h1 span {
+  color: cyan;
+}
+
+/* Nút social */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #0ff;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+}
+body {
+  background: #000; /* để nổi bật hơn */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.social {
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  width: 60px;
+  height: 60px;
+  background: cyan;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+/* Animation chạy từ dưới lên */
+@keyframes slideUp {
+  0% {
+    transform: translateY(100px); /* bắt đầu ở dưới */
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0); /* về đúng vị trí */
+    opacity: 1;
+  }
+}
+
+/* Áp dụng animation cho các nút social nhỏ */
+.social-icons a {
+  animation: slideUp 0.8s ease forwards;
+}
+
+/* Áp dụng animation cho các nút social to */
+.btn {
+  animation: slideUp 0.8s ease forwards;
+}
+
+/* Thêm delay để các nút xuất hiện lần lượt */
+.social-icons a:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.social-icons a:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.social-icons a:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.social-icons a:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.social .btn:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.social .btn:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.social .btn:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.social .btn:nth-child(4) {
+  animation-delay: 0.8s;
+}
+/* 🌟 Hover effect: phóng to + neon glow */
+.social-icons a:hover,
+.btn:hover {
+  transform: scale(1.2); /* phóng to */
+  box-shadow: 0 0 10px cyan, 0 0 20px cyan, 0 0 40px cyan, 0 0 80px cyan; /* phát sáng neon */
+}
+/* Avatar */
+/* Container ảnh */
+.hero-img {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+/* Ảnh */
+.hero-img img {
+  width: 250px; /* chỉnh kích thước */
+  height: 250px;
+  border-radius: 50%; /* ảnh tròn */
+  display: block;
+  position: relative;
+  z-index: 2; /* ảnh nằm trên glow */
+  transition: transform 0.35s ease;
+}
+
+/* Vòng sáng nhiều màu chạy quanh */
+.hero-img::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  width: calc(100% + 24px);
+  height: calc(100% + 24px);
+  border-radius: 50%;
+
+  background: conic-gradient(
+    red,
+    orange,
+    yellow,
+    lime,
+    cyan,
+    blue,
+    magenta,
+    red
+  );
+
+  /* chỉ còn 1 glow duy nhất */
+  filter: blur(15px) saturate(140%);
+  z-index: 1;
+  animation: spin 6s linear infinite;
+}
+
+/* Hover: nổi + sáng mạnh */
+.hero-img:hover {
+  transform: translateY(-4px) scale(1.06);
+}
+.hero-img:hover::before {
+  filter: blur(25px) brightness(1.3);
+}
+.hero-img:hover img {
+  transform: scale(1.05);
+}
+
+/* Animation quay vòng */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===== About Section ===== */
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  padding: 100px 60px;
+  background-color: #000; /* nền đen */
+  min-height: 100vh;
+}
+
+.about-img {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 40px #0ff;
+  animation: glow 3s infinite alternate;
+}
+
+.about-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.about-text h2 span {
+  color: #0ff; /* chữ "Me" màu cyan */
+}
+
+.about-text p {
+  color: #aaa; /* mô tả xám nhạt */
+  margin-bottom: 20px;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+/* Nút Read More */
+.btn {
+  display: inline-flex; /* dùng flex để căn giữa */
+  justify-content: center; /* căn giữa ngang */
+  align-items: center; /* căn giữa dọc */
+  padding: 12px 30px;
+  background: #0ff;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 30px;
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+}
+
+.btn:hover {
+  background: #00e6e6;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #0ff, 0 0 40px #0ff, 0 0 60px #0ff;
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #0ff;
+}
+
+/* Hiệu ứng viền phát sáng */
+@keyframes glow {
+  from {
+    box-shadow: 0 0 20px #0ff;
+  }
+  to {
+    box-shadow: 0 0 50px #0ff;
+  }
+}
+/* Service Section */
+/* Tiêu đề Service Neon Hồng */
+.section-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ff1493; /* hồng đậm */
+  text-align: center;
+  width: 100%;
+  margin: 0 auto 60px;
+
+  /* Hiệu ứng phát sáng */
+  text-shadow: 0 0 10px #ff1493, 0 0 20px #ff1493, 0 0 40px #ff1493,
+    0 0 80px #ff1493;
+
+  /* Thêm animation mượt */
+  transition: transform 0.4s ease, text-shadow 0.4s ease;
+}
+
+/* Hover: phồng cực to + sáng rực */
+.section-title:hover {
+  transform: scale(1.6);
+  text-shadow: 0 0 20px #ff1493, 0 0 40px #ff1493, 0 0 80px #ff1493,
+    0 0 160px #ff1493, 0 0 200px #ff1493;
+}
+
+/* Card layout dọc, căn trái */
+.service-row {
+  display: flex;
+  flex-direction: column; /* xếp dọc */
+  align-items: flex-start; /* căn trái */
+  gap: 30px;
+}
+
+/* Card */
+.service-card {
+  background: #111;
+  color: #ddd;
+  padding: 30px 25px;
+  border-radius: 15px;
+  width: 320px;
+  transition: 0.4s ease;
+  text-align: left;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+/* Hover effect */
+.service-card:hover {
+  transform: translateY(-12px) scale(1.06);
+  box-shadow: 0 0 25px #0ff, 0 0 50px #0ff, 0 0 80px #0ff;
+  z-index: 2;
+}
+
+/* Icon */
+.service-icon {
+  font-size: 38px;
+  color: #0ff;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.service-card p {
+  color: #aaa;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Biến màu + kích thước */
+:root {
+  --neon: #00f5ff;
+  --neon-soft: #00e6ff;
+  --gear-size: 68px;
+  --gap: 26px;
+}
+
+/* KHỐI RIÊNG – tránh ảnh hưởng layout khác */
+.b40-neon-section {
+  position: relative;
+  isolation: isolate; /* tạo stacking context riêng */
+  width: clamp(160px, 18vw, 220px);
+  margin: 80px auto; /* bạn có thể đổi: margin-left nếu muốn sát trái toàn trang */
+  margin-left: clamp(24px, 6vw, 100px); /* căn trái gọn gàng */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* căn TRÁI */
+  gap: 22px;
+  z-index: 5;
+}
+
+/* ẢNH NEON – viền phát sáng cực mạnh + zoom khi hover */
+.b40-neon-image-wrap {
+  position: relative;
+}
+.b40-neon-image {
+  display: block;
+  width: clamp(220px, 26vw, 320px);
+  height: auto;
+  border-radius: 14px;
+  /* viền + phát sáng mạnh */
+  box-shadow: 0 0 0 3px var(--neon), 0 0 24px var(--neon), 0 0 60px var(--neon),
+    inset 0 0 18px rgba(0, 255, 255, 0.35);
+  filter: drop-shadow(0 0 40px var(--neon));
+  transform-origin: center;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, filter 0.35s ease;
+}
+.b40-neon-image:hover {
+  transform: scale(1.12);
+  box-shadow: 0 0 0 3px var(--neon), 0 0 40px var(--neon), 0 0 100px var(--neon),
+    inset 0 0 24px rgba(0, 255, 255, 0.45);
+  filter: drop-shadow(0 0 80px var(--neon));
+}
+
+/* HÀNG BÁNH RĂNG + THANH NEON (không chồng chéo) */
+.b40-gear-row {
+  position: relative;
+  width: min(100%, 980px);
+  height: 140px; /* đủ không gian cho gears + line */
+}
+
+/* Thanh ngang phát sáng – đặt phía SAU (z-index thấp) */
+.b40-glow-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 25px;
+  width: 50vw;
+  height: 15px;
+  border-radius: 6px;
+  z-index: 1;
+
+  /* Gradient nhiều màu neon */
+  background: linear-gradient(
+    90deg,
+    #ff00ff,
+    #00ffff,
+    #00ff00,
+    #ffff00,
+    #ff0000
+  );
+  background-size: 400% 400%;
+
+  /* Glow ban đầu */
+  box-shadow: 0 0 14px #0ff, 0 0 38px #0ff, 0 0 90px #0ff;
+
+  /* Gộp nhiều animation */
+  animation: slideInGlowLine 1.2s ease-out forwards,
+    /* animation load */ glowMove 6s linear infinite,
+    /* gradient đổi màu */ glowPulse 2s ease-in-out infinite; /* hiệu ứng phát sáng */
+}
+
+/* Animation load (cái bạn có sẵn) */
+@keyframes slideInGlowLine {
+  0% {
+    transform: translateX(-150%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Gradient chạy ngang */
+@keyframes glowMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Neon nhấp nháy */
+@keyframes glowPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 14px #0ff, 0 0 38px #0ff, 0 0 90px #0ff;
+  }
+  50% {
+    box-shadow: 0 0 25px #ff0, 0 0 60px #f0f, 0 0 120px #0ff;
+  }
+}
+
+/* Gears – nằm ngay TRÊN thanh, căn trái */
+.b40-gears {
+  position: absolute;
+  left: 0;
+  bottom: 18px; /* cùng toạ độ với line */
+  transform: translateY(-60%); /* nhấc lên ngay trên line */
+  display: flex;
+  gap: var(--gap);
+  z-index: 2;
+}
+
+/* Bánh răng neon (đẹp + mượt) */
+.b40-gear {
+  width: var(--gear-size);
+  height: var(--gear-size);
+  border-radius: 50%;
+  position: relative;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 255, 255, 0.12) 0 58%,
+    transparent 59%
+  );
+  border: 6px solid var(--neon);
+  box-shadow: 0 0 16px var(--neon), inset 0 0 14px var(--neon);
+  animation: b40-spin 6s linear infinite;
+}
+
+/* Răng cưa (vòng răng neon) */
+.b40-gear::before {
+  content: "";
+  position: absolute;
+  inset: -12px;
+  border-radius: 50%;
+  border: 6px dashed var(--neon);
+  box-shadow: 0 0 22px var(--neon);
+}
+
+/* Xoay xen kẽ */
+.b40-gear:nth-child(2),
+.b40-gear:nth-child(4) {
+  animation-direction: reverse;
+}
+
+@keyframes b40-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive: thu nhỏ khi màn nhỏ */
+@media (max-width: 600px) {
+  :root {
+    --gear-size: 54px;
+    --gap: 18px;
+  }
+  .b40-neon-section {
+    margin-left: 18px;
+  }
+}
+.service {
+  background-color: #000;
+  padding: 80px 40px;
+}
+
+/* Neon bar ở cuối chân trang */
+.neon-bar {
+  position: fixed; /* luôn nằm ở cuối trang */
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 15px;
+  background: #0ff; /* màu neon xanh */
+  border-radius: 10px;
+  box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff;
+  animation: neonMove 3s ease-in-out;
+}
+
+/* Animation cho thanh neon */
+@keyframes neonMove {
+  0% {
+    transform: translateX(-150%); /* bắt đầu ngoài khung trái */
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-50%); /* vào giữa */
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%); /* giữ nguyên */
+    opacity: 1;
+  }
+}
+.neon-bar {
+  background: linear-gradient(
+    90deg,
+    #ff00ff,
+    #00ffff,
+    #00ff00,
+    #ffff00,
+    #ff0000
+  );
+  background-size: 400% 400%;
+  animation: neonMove 3s ease-in-out, neonColor 6s linear infinite;
+}
+
+@keyframes neonColor {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
